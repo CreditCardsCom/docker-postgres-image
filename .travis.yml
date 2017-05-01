@@ -12,7 +12,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: pipeline-scripts/docker/publish.sh
+  script: scripts/publish.sh
   skip_cleanup: true
   on:
     tags: true
