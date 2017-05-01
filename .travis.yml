@@ -7,6 +7,9 @@ env:
   global:
     - NAME=postgres
 
+script:
+  - echo "skipping"
+
 before_deploy:
   - git clone git@github.com:CreditCardsCom/pipeline-scripts.git
 
