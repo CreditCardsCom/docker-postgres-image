@@ -1,0 +1,18 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - NAME=postgres
+
+before_deploy:
+  - git clone git@github.com:CreditCardsCom/pipeline-scripts.git
+
+deploy:
+  provider: script
+  script: pipeline-scripts/docker/publish.sh
+  skip_cleanup: true
+  on:
+    tags: true
