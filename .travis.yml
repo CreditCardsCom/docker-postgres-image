@@ -3,10 +3,6 @@ sudo: required
 services:
   - docker
 
-env:
-  global:
-    - NAME=postgres
-
 script:
   - echo "skipping"
 
